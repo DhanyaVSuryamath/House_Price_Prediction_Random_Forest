@@ -26,3 +26,24 @@ house_price_prediction/
 ├── train.py                      # Main script to run training pipeline
 ├── README.md
 └── .gitignore
+
+
+
+
+# Step 1: Navigate to your project
+cd path/to/your/project
+
+# Step 2: Initialize Git
+git init
+
+# Step 3: Add all files
+git add .
+
+# Step 4: Commit the changes
+git commit -m "Initial commit"
+
+# Step 5: Add your remote repo (replace the URL below with yours)
+git remote add origin https://github.com/your-username/your-repo-name.git
+
+# Step 6: Push to GitHub
+git push -u origin master  # or use 'main' if your default branch is main
