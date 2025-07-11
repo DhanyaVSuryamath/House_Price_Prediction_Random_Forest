@@ -1,7 +1,7 @@
 from src.config import RAW_DATA_PATH
 from src.data_loader import DataLoader
 from src.preprocessing import DataCleaner
-from src.feature_engineering import FeatureEngineer
+from src.Feature_Engineering2 import FeatureEngineer
 from src.model import ModelTrainer
 from src.evaluate import evaluate_model
 
@@ -16,11 +16,11 @@ def run_pipeline():
     cleaner.show_uniques(['MSSubClass', 'MSZoning', 'LotConfig', 'BldgType', 'OverallCond', 'Exterior1st'])
 
     # Feature Engineering
-    fe = FeatureEngineer(data)
-    fe.fill_missing()
-    fe.drop_id_column()
-    fe.encode_columns()
-    X, y = fe.split_X_y()
+    data_transform = FeatureEngineer(data)
+    data_transform.fill_missing()
+    data_transform.drop_id_column()
+    data_transform.encode_columns()
+    X, y = data_transform.split_X_y()
 
     # Model training
     trainer = ModelTrainer(X, y)

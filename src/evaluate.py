@@ -9,3 +9,4 @@ def evaluate_model(y_true, y_pred, model_name="Model"):
     print("MSE:", mse)
     print("RMSE:", np.sqrt(mse))
     print("MAE:", mean_absolute_error(y_true, y_pred))
+
